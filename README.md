@@ -5,7 +5,7 @@
 ![访问量](https://visitor-badge.laobi.icu/badge?page_id=aipm-hbx)
 [![GitHub 星标](https://img.shields.io/github/stars/914087606-blip/aipm-hbx?style=social)](https://github.com/914087606-blip/aipm-hbx/stargazers)
 
-**人工智能产品经理**
+**AI产品经理**
 
 [在线访问](https://aipm-hbx.pages.dev) · [GitHub 仓库](https://github.com/914087606-blip/aipm-hbx)
 
@@ -27,29 +27,23 @@
 
 ## 工作经历
 
-### AI 产品经理 @ 光场3D 显示科技公司
+### AI 产品经理
 
 - 主导"光场3D显示+AI"软硬协同生态产品研发
-- 核心产品：文创 AI 决策平台、云祭扫小程序、光场3D AI 内容生成平台
-- 标杆客户：国家博物馆、敦煌研究院
-
-### 产品经理 @ 素质教育科技公司
-
-- 负责儿童多模态素质教育终端产品规划
-- AR 沉浸式空间展示产品
+- 核心产品：文创 AI 决策平台、云祭扫小程序、光场3D AI 内容生成平台等
 
 ## 技术栈
 
-- **AI**: Multi-Agent / MCP / Function Calling / RAG / LLM Fine-tuning
+- **AI**: Multi-Agent / MCP / Function Calling / RAG / Vibe Coding
 - **产品**: MAIR / CRISPE / ROI 分析 / 需求挖掘
-- **前端**: React / Tailwind CSS / Lucide Icons
+- **前端**: Vibe Coding
 
 ---
 
 ## 联系我
 
 - **GitHub**: [914087606-blip](https://github.com/914087606-blip)
-- **邮箱**: huangbangxing@gmail.com
+- **邮箱**: hbx0501@163.com
 
 ---
 
