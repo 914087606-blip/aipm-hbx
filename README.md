@@ -7,7 +7,7 @@
 
 **黄邦兴 | AI产品经理**
 
-[个人官网：交个朋友吧~](https://aipm-hbx.pages.dev)
+[个人官网：交个朋友吧~](https://914087606-blip.github.io/aipm-hbx/)
 
 </div>
 
