@@ -2,10 +2,10 @@
 
 <div align="center">
 
-![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=aipm-hbx)
-[![GitHub stars](https://img.shields.io/github/stars/914087606-blip/aipm-hbx?style=social)](https://github.com/914087606-blip/aipm-hbx/stargazers)
+![访问量](https://visitor-badge.laobi.icu/badge?page_id=aipm-hbx)
+[![GitHub 星标](https://img.shields.io/github/stars/914087606-blip/aipm-hbx?style=social)](https://github.com/914087606-blip/aipm-hbx/stargazers)
 
-**AI产品经理 / 系统架构思考者 / 第一性原理践行者**
+**人工智能产品经理**
 
 [在线访问](https://aipm-hbx.pages.dev) · [GitHub 仓库](https://github.com/914087606-blip/aipm-hbx)
 
@@ -22,8 +22,8 @@
 | 领域 | 能力描述 |
 |------|---------|
 | **业务洞察** | MAIR 模型、ROI 测算、真伪需求甄别 |
-| **架构编排** | Multi-Agent 协同、MCP 协议、Function Calling |
-| **工程调优** | RAG 知识库、Chunking 策略、评测闭环 |
+| **架构编排** |多智能体协同、MCP协议、函数调用|
+| **工程调优** |RAG知识库、分块策略、评测闭环|
 
 ## 工作经历
 
