@@ -5,9 +5,9 @@
 ![访问量](https://visitor-badge.laobi.icu/badge?page_id=aipm-hbx)
 [![GitHub 星标](https://img.shields.io/github/stars/914087606-blip/aipm-hbx?style=social)](https://github.com/914087606-blip/aipm-hbx/stargazers)
 
-**AI产品经理**
+**黄邦兴 | AI产品经理**
 
-[在线访问](https://aipm-hbx.pages.dev) · [GitHub 仓库](https://github.com/914087606-blip/aipm-hbx)
+[个人官网：交个朋友吧~](https://aipm-hbx.pages.dev)
 
 </div>
 
