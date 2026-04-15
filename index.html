@@ -325,7 +325,8 @@
                     <div class="flex flex-col md:flex-row gap-10 relative z-10">
                         <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-white/5 pb-6 md:pb-0 md:pr-10">
                             <div class="w-14 h-14 bg-gradient-to-br from-gray-800 to-[#111] border border-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
-                                <span class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-300 to-primary-600">01</span>
+                                <!-- 修复不显示问题：使用纯色加物理发光代替透明渐变 -->
+                                <span class="text-2xl font-bold text-primary-400 drop-shadow-[0_0_10px_rgba(52,211,153,0.6)]">01</span>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-100 mb-2 tracking-wide">业务洞察与价值定义</h3>
                             <p class="text-primary-500/80 font-mono text-xs tracking-widest uppercase">Business Logic & MAIR</p>
@@ -349,7 +350,8 @@
                     <div class="flex flex-col md:flex-row gap-10 relative z-10">
                         <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-white/5 pb-6 md:pb-0 md:pr-10">
                             <div class="w-14 h-14 bg-gradient-to-br from-gray-800 to-[#111] border border-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
-                                <span class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-600">02</span>
+                                <!-- 修复不显示问题 -->
+                                <span class="text-2xl font-bold text-blue-400 drop-shadow-[0_0_10px_rgba(96,165,250,0.6)]">02</span>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-100 mb-2 tracking-wide">系统链接与架构编排</h3>
                             <p class="text-blue-400/80 font-mono text-xs tracking-widest uppercase">Agent Orchestration</p>
@@ -374,7 +376,8 @@
                     <div class="flex flex-col md:flex-row gap-10 relative z-10">
                         <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-white/5 pb-6 md:pb-0 md:pr-10">
                             <div class="w-14 h-14 bg-gradient-to-br from-gray-800 to-[#111] border border-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
-                                <span class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-300 to-purple-600">03</span>
+                                <!-- 修复不显示问题 -->
+                                <span class="text-2xl font-bold text-purple-400 drop-shadow-[0_0_10px_rgba(192,132,252,0.6)]">03</span>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-100 mb-2 tracking-wide">工程调优与数据飞轮</h3>
                             <p class="text-purple-400/80 font-mono text-xs tracking-widest uppercase">Engineering & Flywheel</p>
@@ -655,6 +658,8 @@
     <!-- 模块四：作品展示 (Portfolio) -> 业务切片 -->
     <section id="portfolio" class="py-32 border-t border-white/5 bg-[#030303]/60 backdrop-blur-xl relative z-10">
         <div class="max-w-[1440px] mx-auto px-6 md:px-12 xl:px-16">
+            
+            <!-- 优化排版：桌面端同行对齐，移动端自动折行 -->
             <div class="mb-14 flex flex-col md:flex-row justify-between items-start md:items-end reveal">
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-white flex items-center tracking-tight">
@@ -663,9 +668,26 @@
                     </h2>
                     <p class="text-gray-500 mt-3 text-base font-light tracking-wide">业务操盘之外的极客实践，Talk is cheap, show me the code.</p>
                 </div>
-                <a href="https://914087606-blip.github.io/aipm-portfolio/" target="_blank" class="mt-4 md:mt-0 inline-flex items-center text-sm font-mono text-primary-500 hover:text-primary-400 transition-colors bg-primary-500/10 px-5 py-2.5 rounded-lg border border-primary-500/20 shadow-[0_0_15px_rgba(16,185,129,0.1)]">
-                    <i data-lucide="external-link" class="w-4 h-4 mr-2"></i> 全屏体验
-                </a>
+                
+                <!-- 全新高能悬浮按钮：居右显示 -->
+                <div class="mt-8 md:mt-0 flex-shrink-0">
+                    <a href="https://914087606-blip.github.io/aipm-portfolio/" target="_blank" class="group relative inline-flex items-center space-x-4 bg-[#0a0a0c] border border-primary-500/30 px-6 py-3 rounded-2xl overflow-hidden transition-all duration-500 hover:border-primary-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.25)] hover:-translate-y-1">
+                        <!-- 悬浮扫光效果 -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary-500/15 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-1000 ease-in-out"></div>
+                        <!-- 呼吸脉冲底色 -->
+                        <div class="absolute inset-0 bg-primary-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse pointer-events-none"></div>
+                        
+                        <!-- 左侧发光图标 -->
+                        <div class="relative z-10 w-9 h-9 rounded-full bg-primary-500/10 flex items-center justify-center border border-primary-500/30 group-hover:bg-primary-500 transition-colors shadow-[inset_0_0_10px_rgba(16,185,129,0.2)]">
+                            <i data-lucide="external-link" class="w-4 h-4 text-primary-400 group-hover:text-white group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-300"></i>
+                        </div>
+                        <!-- 右侧双层文案 -->
+                        <div class="relative z-10 flex flex-col text-left">
+                            <span class="text-[10px] font-mono text-primary-500/70 tracking-widest uppercase mb-0.5 leading-none">>_ SYSTEM_OVERRIDE</span>
+                            <span class="font-bold text-gray-200 text-sm md:text-base tracking-wide group-hover:text-white transition-colors whitespace-nowrap leading-none mt-1">弹射至独立全屏沙箱</span>
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <!-- 极客风模拟浏览器视窗内嵌 iframe (极致拟真重构版) -->
