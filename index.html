@@ -6,8 +6,8 @@
     <title>黄邦兴 | AI产品经理</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide Icons (Updated to reliable UMD build) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script>
@@ -78,7 +78,7 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
-        /* 动态呼吸光晕 - 改为fixed避免撑开文档导致滚动穿透 */
+        /* 动态呼吸光晕 */
         .ambient-blob {
             position: fixed;
             border-radius: 50%;
@@ -146,7 +146,7 @@
             100% { 
                 opacity: 1; 
                 filter: blur(0); 
-                letter-spacing: -0.025em; /* 对应 tracking-tight */
+                letter-spacing: -0.025em;
                 transform: scale(1); 
             }
         }
@@ -184,12 +184,12 @@
     <div class="fixed inset-0 z-[-3] bg-grid-pattern"></div>
     <div class="bg-noise"></div>
     
-    <!-- 动态呼吸光晕 (修复了高度穿透bug) -->
+    <!-- 动态呼吸光晕 -->
     <div class="ambient-blob w-[600px] h-[600px] bg-primary-500/10 top-[-10%] left-[-10%]"></div>
     <div class="ambient-blob w-[800px] h-[800px] bg-blue-600/10 top-[30%] right-[-15%]" style="animation-delay: -5s;"></div>
     <div class="ambient-blob w-[500px] h-[500px] bg-purple-500/10 bottom-[-10%] left-[15%]" style="animation-delay: -10s;"></div>
 
-    <!-- 导航栏 (文案对齐与高级交互优化) -->
+    <!-- 导航栏 -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
         <div class="max-w-[1440px] mx-auto px-6 md:px-12 xl:px-16">
             <div class="flex items-center justify-between h-20">
@@ -256,43 +256,43 @@
                 <span class="px-5 py-2.5 bg-primary-500/5 backdrop-blur-md rounded-full border border-primary-500/20 text-primary-400 shadow-[0_0_15px_rgba(16,185,129,0.08)] tracking-widest">[ 商业闭环落地推手 ]</span>
             </div>
             
-            <!-- 核心引导按钮 (高级悬浮交互与双层终端排版) -->
-            <div class="reveal reveal-delay-3 flex flex-col sm:flex-row items-stretch justify-center gap-6 pt-12 w-full z-20 relative">
+            <!-- 核心引导按钮 -->
+            <div class="reveal reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-6 pt-12 w-full z-20 relative">
                 
-                <!-- 按钮1：跳转工作经历 (翡翠绿极客指令风格) -->
-                <a href="#experience" class="group relative rounded-2xl p-[1px] transition-all duration-500 hover:-translate-y-1.5 w-full sm:w-auto">
+                <!-- 按钮1：跳转工作经历 -->
+                <a href="#experience" class="group relative rounded-2xl p-[1px] transition-all duration-500 hover:-translate-y-1.5 w-full sm:w-[280px]">
                     <!-- 发光渐变边框 -->
                     <div class="absolute inset-0 bg-gradient-to-b from-primary-500/60 to-transparent rounded-2xl opacity-70 group-hover:opacity-100 transition-opacity shadow-[0_0_30px_rgba(16,185,129,0.15)] group-hover:shadow-[0_0_40px_rgba(16,185,129,0.3)] blur-[1px]"></div>
                     <!-- 内部内容区 -->
-                    <div class="relative flex items-center space-x-4 bg-[#0a0a0c] px-8 py-4 rounded-[15px] h-full overflow-hidden">
+                    <div class="relative flex items-center justify-center space-x-3 bg-[#0a0a0c] px-4 py-4 rounded-[15px] h-full overflow-hidden">
                         <!-- 悬浮扫光效果 -->
                         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary-500/10 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-1000 ease-in-out"></div>
                         
-                        <div class="w-10 h-10 rounded-full bg-primary-500/10 flex items-center justify-center border border-primary-500/30 group-hover:rotate-12 transition-transform shadow-[inset_0_0_10px_rgba(16,185,129,0.2)]">
+                        <div class="w-10 h-10 rounded-full bg-primary-500/10 flex items-center justify-center border border-primary-500/30 group-hover:rotate-12 transition-transform flex-shrink-0 shadow-[inset_0_0_10px_rgba(16,185,129,0.2)]">
                             <i data-lucide="microscope" class="w-5 h-5 text-primary-400"></i>
                         </div>
                         <div class="flex flex-col text-left">
-                            <span class="text-[10px] font-mono text-primary-500/80 tracking-widest uppercase mb-0.5">>_ EXECUTE_QUERY</span>
-                            <span class="font-bold text-gray-100 text-sm md:text-base tracking-wide group-hover:text-primary-300 transition-colors">深度拆解工作经历</span>
+                            <span class="text-[10px] font-mono text-primary-500/80 tracking-widest uppercase mb-0.5 leading-none">>_ EXEC_QUERY</span>
+                            <span class="font-bold text-gray-100 text-sm md:text-base tracking-wide group-hover:text-primary-300 transition-colors leading-none mt-1">深度拆解工作经历</span>
                         </div>
                     </div>
                 </a>
                 
-                <!-- 按钮2：跳转业务切片 (深邃蓝极客沙箱风格) -->
-                <a href="#portfolio" class="group relative rounded-2xl p-[1px] transition-all duration-500 hover:-translate-y-1.5 w-full sm:w-auto">
+                <!-- 按钮2：跳转业务切片 -->
+                <a href="#portfolio" class="group relative rounded-2xl p-[1px] transition-all duration-500 hover:-translate-y-1.5 w-full sm:w-[280px]">
                     <!-- 发光渐变边框 -->
                     <div class="absolute inset-0 bg-gradient-to-b from-blue-500/60 to-transparent rounded-2xl opacity-70 group-hover:opacity-100 transition-opacity shadow-[0_0_30px_rgba(59,130,246,0.15)] group-hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] blur-[1px]"></div>
                     <!-- 内部内容区 -->
-                    <div class="relative flex items-center space-x-4 bg-[#0a0a0c] px-8 py-4 rounded-[15px] h-full overflow-hidden">
+                    <div class="relative flex items-center justify-center space-x-3 bg-[#0a0a0c] px-4 py-4 rounded-[15px] h-full overflow-hidden">
                         <!-- 悬浮扫光效果 -->
                         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-1000 ease-in-out"></div>
                         
-                        <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center border border-blue-500/30 group-hover:-rotate-12 transition-transform shadow-[inset_0_0_10px_rgba(59,130,246,0.2)]">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center border border-blue-500/30 group-hover:-rotate-12 transition-transform flex-shrink-0 shadow-[inset_0_0_10px_rgba(59,130,246,0.2)]">
                             <i data-lucide="gamepad-2" class="w-5 h-5 text-blue-400"></i>
                         </div>
                         <div class="flex flex-col text-left">
-                            <span class="text-[10px] font-mono text-blue-500/80 tracking-widest uppercase mb-0.5">>_ LIVE_SANDBOX</span>
-                            <span class="font-bold text-gray-100 text-sm md:text-base tracking-wide group-hover:text-blue-300 transition-colors">把玩真实业务切片</span>
+                            <span class="text-[10px] font-mono text-blue-500/80 tracking-widest uppercase mb-0.5 leading-none">>_ LIVE_SANDBOX</span>
+                            <span class="font-bold text-gray-100 text-sm md:text-base tracking-wide group-hover:text-blue-300 transition-colors leading-none mt-1">把玩真实业务切片</span>
                         </div>
                     </div>
                 </a>
@@ -325,7 +325,6 @@
                     <div class="flex flex-col md:flex-row gap-10 relative z-10">
                         <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-white/5 pb-6 md:pb-0 md:pr-10">
                             <div class="w-14 h-14 bg-gradient-to-br from-gray-800 to-[#111] border border-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
-                                <!-- 修复不显示问题：使用纯色加物理发光代替透明渐变 -->
                                 <span class="text-2xl font-bold text-primary-400 drop-shadow-[0_0_10px_rgba(52,211,153,0.6)]">01</span>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-100 mb-2 tracking-wide">业务洞察与价值定义</h3>
@@ -350,7 +349,6 @@
                     <div class="flex flex-col md:flex-row gap-10 relative z-10">
                         <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-white/5 pb-6 md:pb-0 md:pr-10">
                             <div class="w-14 h-14 bg-gradient-to-br from-gray-800 to-[#111] border border-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
-                                <!-- 修复不显示问题 -->
                                 <span class="text-2xl font-bold text-blue-400 drop-shadow-[0_0_10px_rgba(96,165,250,0.6)]">02</span>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-100 mb-2 tracking-wide">系统链接与架构编排</h3>
@@ -376,7 +374,6 @@
                     <div class="flex flex-col md:flex-row gap-10 relative z-10">
                         <div class="md:w-1/3 border-b md:border-b-0 md:border-r border-white/5 pb-6 md:pb-0 md:pr-10">
                             <div class="w-14 h-14 bg-gradient-to-br from-gray-800 to-[#111] border border-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
-                                <!-- 修复不显示问题 -->
                                 <span class="text-2xl font-bold text-purple-400 drop-shadow-[0_0_10px_rgba(192,132,252,0.6)]">03</span>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-100 mb-2 tracking-wide">工程调优与数据飞轮</h3>
@@ -730,7 +727,7 @@
                         <span class="text-[10px] font-mono text-gray-500 tracking-widest uppercase animate-pulse">Establishing Secure Connection...</span>
                     </div>
                     
-                    <!-- 真实 iframe 注入 (隐藏丑陋滚动条黑科技) -->
+                    <!-- 真实 iframe 注入 -->
                     <div class="absolute inset-0 z-10 overflow-hidden rounded-b-[1.5rem]">
                         <iframe 
                             src="https://914087606-blip.github.io/aipm-portfolio/" 
@@ -772,12 +769,23 @@
                             <i data-lucide="mail" class="w-5 h-5 mr-5 text-gray-500"></i>
                             <span class="font-mono text-base tracking-wider">hbx0501@163.com</span>
                         </div>
-                        <div class="flex items-center text-gray-300 p-5 bg-[#080808]/80 border border-white/5 rounded-2xl justify-between group cursor-pointer hover:border-primary-500/30 transition-colors backdrop-blur-sm">
+                        
+                        <!-- 添加微信沟通 (带有 Hover 二维码浮层交互) -->
+                        <div class="relative flex items-center text-gray-300 p-5 bg-[#080808]/80 border border-white/5 rounded-2xl justify-between group cursor-pointer hover:border-primary-500/30 transition-colors backdrop-blur-sm">
                             <div class="flex items-center">
                                 <i data-lucide="message-circle" class="w-5 h-5 mr-5 text-gray-500 group-hover:text-primary-400 transition-colors"></i>
                                 <span class="font-mono text-base tracking-wider">添加微信沟通</span>
                             </div>
                             <i data-lucide="qr-code" class="w-5 h-5 text-gray-600 group-hover:text-white transition-colors"></i>
+                            
+                            <!-- 微信二维码 Hover 弹窗层 -->
+                            <div class="absolute bottom-[calc(100%+16px)] right-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1) translate-y-4 group-hover:translate-y-0 z-50 pointer-events-none">
+                                <div class="bg-white p-2.5 rounded-2xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] border border-white/10 relative">
+                                    <!-- 动态实时生成二维码图片 -->
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&margin=2&data=https%3A%2F%2Fu.wechat.com%2FMHFnw0PzVACQDaVrTqn8e3w%3Fs%3D4" alt="黄邦兴的微信二维码" class="w-48 sm:w-56 h-auto rounded-xl object-contain bg-white block">
+                                    <div class="absolute -bottom-2 right-7 w-4 h-4 bg-white transform rotate-45 rounded-sm"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -827,8 +835,12 @@
 
     <!-- Scripts -->
     <script>
-        // 初始化图标
-        lucide.createIcons();
+        // 初始化图标及解决 ReferenceError: lucide is not defined 问题
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
 
         // 滚动揭示动画逻辑
         function reveal() {
@@ -887,7 +899,7 @@
             if (isTyping) return;
             isTyping = true;
             runBtn.innerHTML = '<i data-lucide="loader" class="w-3.5 h-3.5 mr-2 animate-spin"></i> Fetching...';
-            lucide.createIcons();
+            if (typeof lucide !== 'undefined') lucide.createIcons();
             runBtn.disabled = true;
             
             terminalEl.innerHTML = '<span class="text-blue-400">$ curl -X GET https://api.hbx.ai/profile</span><br/>';
@@ -900,11 +912,11 @@
             await typeText(jsonString, preEl, 15);
             
             runBtn.innerHTML = '<i data-lucide="check" class="w-3.5 h-3.5 mr-2"></i> 200 OK';
-            lucide.createIcons();
+            if (typeof lucide !== 'undefined') lucide.createIcons();
             
             setTimeout(() => {
                 runBtn.innerHTML = '<i data-lucide="refresh-cw" class="w-3.5 h-3.5 mr-2"></i> Re-fetch';
-                lucide.createIcons();
+                if (typeof lucide !== 'undefined') lucide.createIcons();
                 runBtn.disabled = false;
                 isTyping = false;
             }, 2000);
@@ -915,7 +927,7 @@
             setTimeout(() => {
                 const nameEl = document.getElementById('hero-name');
                 if(nameEl) nameEl.classList.add('glitch-effect');
-            }, 1800); // 等待1.8秒收敛动画结束后接入故障闪烁
+            }, 1800); 
         });
     </script>
 </body>
